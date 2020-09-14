@@ -11,9 +11,7 @@ export default () => (
             background-color: #fff;
             font-family: ${Theme.fonts.sans}
         }
-        * {
-            box-sizing: border-box;
-        }
+
     `}
   </style>
 );

@@ -38,12 +38,11 @@ const Message = styled.text`
   font-style: normal;
   line-height: 1.19;
   letter-spacing: normal;
-  /* text-align: left; */
   display: block;
   color: #6c757d;
 `;
 export default function FormField(props) {
-  const { name, type, value, isInvalid, onChange, icon, message } = props;
+  const { name, type, value, isInvalid, icon, message } = props;
   return (
     <>
       <Form.Group className="form-label-group">
@@ -57,7 +56,6 @@ export default function FormField(props) {
           type={type}
           value={value}
           isInvalid={isInvalid}
-          onChange={onChange}
           {...props}
         />
         <Message>{message}</Message>
@@ -70,7 +68,6 @@ FormField.propTypes = {
   type: PropTypes.string,
   value: PropTypes.string,
   isInvalid: PropTypes.any,
-  onChange: PropTypes.func,
   icon: PropTypes.any,
   message: PropTypes.any,
 };
