@@ -29,8 +29,21 @@ const FormControl = styled(Form.Control)`
     background-color: #ffffff;
   }
 `;
+const Message = styled.text`
+  width: 20em;
+  font-family: "Roboto";
+  font-size: 1em;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  /* text-align: left; */
+  display: block;
+  color: #6c757d;
+`;
 export default function FormField(props) {
-  const { name, type, value, isInvalid, onChange, icon } = props;
+  const { name, type, value, isInvalid, onChange, icon, message } = props;
   return (
     <>
       <Form.Group className="form-label-group">
@@ -47,6 +60,7 @@ export default function FormField(props) {
           onChange={onChange}
           {...props}
         />
+        <Message>{message}</Message>
       </Form.Group>
     </>
   );
@@ -58,4 +72,5 @@ FormField.propTypes = {
   isInvalid: PropTypes.any,
   onChange: PropTypes.func,
   icon: PropTypes.any,
+  message: PropTypes.any,
 };

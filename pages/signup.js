@@ -1,4 +1,4 @@
-import React, { useReducer, useContext, useState } from "react";
+import React, { useReducer, useState } from "react";
 import styled from "styled-components";
 import Form from "react-bootstrap/Form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -23,39 +23,15 @@ const Title = styled.h1`
   color: #104f67;
 `;
 const GroupContainer = styled.div``;
-const FormLabel = styled(Form.Label)`
-  font-size: 1.125em;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.11;
-  letter-spacing: normal;
-  text-align: left;
-  color: #104f67;
-  justify-content: space-between;
-  display: flex;
-  margin-bottom: 0.5em;
-  margin-top: 1.313em;
-`;
 
-const FormControl = styled(Form.Control)`
-  height: 2.8em;
-  width: 21.875em;
-  border-radius: 3px;
-  border: solid 1px grey;
-  background-color: #ffffff;
-  :focus {
-    border-radius: 3px;
-    border: solid 0.0416em #104f67;
-    background-color: #ffffff;
-  }
-`;
 const Icon = styled.span`
   display: inline-flex;
+  float: right;
 `;
 
 export default function Signup() {
   const [view, setView] = useState(false);
+  const [review, setReiew] = useState(false);
   function validateForm() {
     return (
       formInput.full_name.length > 0 &&
@@ -132,9 +108,11 @@ export default function Signup() {
                 )}
               </Icon>
             }
+            message="Passwords must be at least 8 characters and
+            include a capital letter, number and symbol"
           />
           <FormField
-            name="Re-Password"
+            name="Re-enter Password"
             value={formInput.repassword}
             onChange={(e) =>
               handleChange(e, passwordReg, setFormInput, setFormInputError)
@@ -143,10 +121,10 @@ export default function Signup() {
             icon={
               <Icon
                 onClick={() => {
-                  setView(!view);
+                  setReview(!review);
                 }}
               >
-                {view ? (
+                {review ? (
                   <FontAwesomeIcon icon={faEye} />
                 ) : (
                   <FontAwesomeIcon icon={faEyeSlash} />
