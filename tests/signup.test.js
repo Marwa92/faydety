@@ -5,7 +5,6 @@ import Signup from "../pages/signup";
 describe("SignupForm component", () => {
   it("shows all required input fields with empty values", () => {
     const { getByTestId } = render(<Signup />);
-
     expect(getByTestId("full_name").value).toBe("");
     expect(getByTestId("email").value).toBe("");
     expect(getByTestId("password").value).toBe("");
