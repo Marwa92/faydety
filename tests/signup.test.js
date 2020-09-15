@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Signup from "../pages/signup";
+import Signup from "../pages/signup/signupForm";
 
 describe("SignupForm component", () => {
   it("shows all required input fields with empty values", () => {
