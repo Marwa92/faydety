@@ -29,7 +29,7 @@ const FormControl = styled(Form.Control)`
     background-color: #ffffff;
   }
 `;
-const Message = styled.text`
+const Message = styled.p`
   width: 20em;
   font-family: "Roboto";
   font-size: 1em;

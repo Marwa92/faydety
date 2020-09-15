@@ -85,6 +85,7 @@ export default function Signup() {
         <Form className="flex-column">
           <GroupContainer>
             <FormField
+              data-testid="full_name"
               name="Full Name"
               id="full_name"
               type="text"
@@ -96,6 +97,7 @@ export default function Signup() {
               isInvalid={formInputError.full_name}
             />
             <FormField
+              data-testid="email"
               name="Email"
               id="email"
               type="text"
@@ -106,6 +108,7 @@ export default function Signup() {
               isInvalid={formInputError.email}
             />
             <FormField
+              data-testid="password"
               name="Password"
               id="password"
               value={formInput.password}
@@ -130,6 +133,7 @@ export default function Signup() {
             include a capital letter, number and symbol"
             />
             <FormField
+              data-testid="repassword"
               name="Re-enter Password"
               id="repassword"
               value={formInput.repassword}

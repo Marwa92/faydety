@@ -7,5 +7,4 @@ module.exports = {
     "^.+\\.(js|jsx|ts|tsx)$":
       "/home/marwa/Projects/nextjs-boilerplate/node_modules/babel-jest",
   },
-  basePath: "/src/tests",
 };
