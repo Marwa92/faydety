@@ -2,9 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  margin-top: 8em;
   width: 3.375em;
-  border: 1px solid red;
   flex-direction: column;
   text-align: center;
   height: 21.344em;

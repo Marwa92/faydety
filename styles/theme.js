@@ -1,4 +1,5 @@
 const primaryColor = "#104f67;";
+
 export default {
   fonts: {
     sans: "Open Sans, sans-serif",

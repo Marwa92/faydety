@@ -11,10 +11,8 @@ import { textReg, emailReg, passwordReg } from "../../utils/Regex";
 
 const Container = styled.div`
   flex-direction: row;
-  border: 1px solid blue;
   margin-right: 2.5em;
-  margin-left: 16.25em;
-  margin-bottom: 5.625;
+  width: 21.875em;
 `;
 const Title = styled.h1`
   object-fit: contain;
